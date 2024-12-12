@@ -1,7 +1,7 @@
 ﻿using tabuleiro;
 using System;
 
-namespace xadrez_console {
+namespace xadrez {
     internal class Tela {
         public static void imprimirTabuleiro(Tabuleiro tab) {
             for(int i=0; i<tab.linhas; i++) {
@@ -10,7 +10,7 @@ namespace xadrez_console {
                         Console.Write("- ");
                     }
                     else {
-                    Console.Write($"tab.peca(i,j)  {" "}");
+                    Console.Write($"{tab.peca(i,j)} ");
                     }
                 }
                 Console.WriteLine();
