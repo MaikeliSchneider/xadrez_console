@@ -5,9 +5,9 @@ using xadrez;
 namespace xadrez {
     internal class Tela {
         public static void imprimirTabuleiro(Tabuleiro tab) {
-            for (int i = 0;i < tab.linhas;i++) {
+            for (int i = 0;i < tab.linha;i++) {
                 Console.Write($"{8 - i} ");
-                for (int j = 0;j < tab.colunas;j++) {
+                for (int j = 0;j < tab.coluna;j++) {
                     imprimirPeca(tab.peca(i,j));
                 }
                 Console.WriteLine();
@@ -19,9 +19,9 @@ namespace xadrez {
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
 
-            for (int i = 0;i < tab.linhas;i++) {
+            for (int i = 0;i < tab.linha;i++) {
                 Console.Write($"{8 - i} ");
-                for (int j = 0;j < tab.colunas;j++) {
+                for (int j = 0;j < tab.coluna;j++) {
                     if (posicoesPossiveis[i,j]) {
                         Console.BackgroundColor = fundoAlterado;
                     }
